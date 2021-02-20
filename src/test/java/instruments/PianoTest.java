@@ -40,6 +40,16 @@ public class PianoTest {
     }
 
     @Test
+    public void instrumentCanBePlayed(){
+        assertEquals("*MUSIC*", piano.play());
+    }
+
+    @Test
+    public void canCalculateInstrumentMarkup(){
+        assertEquals(551, piano.calculateMarkup());
+    }
+
+    @Test
     public void pianoHasType(){
         assertEquals(PianoType.UPRIGHT, piano.getPianoType());
     }
@@ -59,4 +69,5 @@ public class PianoTest {
     public void canTunePiano(){
         assertEquals("The piano has been tuned.", piano.tuneInstrument());
     }
+
 }

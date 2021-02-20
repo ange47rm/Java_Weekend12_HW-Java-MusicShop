@@ -40,6 +40,16 @@ public class GuitarTest {
     }
 
     @Test
+    public void instrumentCanBePlayed(){
+        assertEquals("*MUSIC*", guitar.play());
+    }
+
+    @Test
+    public void canCalculateInstrumentMarkup(){
+        assertEquals(75, guitar.calculateMarkup());
+    }
+
+    @Test
     public void guitarHasNumberOfStrings(){
         assertEquals(5, guitar.getNumberOfStrings());
     }

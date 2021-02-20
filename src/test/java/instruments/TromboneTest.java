@@ -40,6 +40,16 @@ public class TromboneTest {
     }
 
     @Test
+    public void instrumentCanBePlayed(){
+        assertEquals("*MUSIC*", trombone.play());
+    }
+
+    @Test
+    public void canCalculateInstrumentMarkup(){
+        assertEquals(45, trombone.calculateMarkup());
+    }
+
+    @Test
     public void tromboneHasType(){
         assertEquals(TromboneType.BASE, trombone.getTromboneType());
     }
