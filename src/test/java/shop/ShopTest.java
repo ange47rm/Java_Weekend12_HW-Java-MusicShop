@@ -43,4 +43,12 @@ public class ShopTest {
         shop.removeItemFromStock(piano);
         assertEquals(2, shop.getItemInStockCount());
     }
+
+    @Test
+    public void canCalculateCurrentTotalShopPotentialProfit(){
+        shop.addItemToStock(piano); // Margin: 551
+        shop.addItemToStock(accessory); // Margin: 4
+        shop.addItemToStock(trombone); // Margin: 45
+        assertEquals(600, shop.calculatePotentialTotalShopProfit());
+    }
 }
